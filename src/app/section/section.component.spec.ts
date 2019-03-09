@@ -24,8 +24,8 @@ describe('SectionComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should set text property to given text', () => {
-    let bodyText = "foo"
+  it('should set bodyText property to given text', () => {
+    let bodyText = "Sample body..."
     component.bodyText = bodyText
     expect(component.bodyText).toBe(bodyText);
   })
