@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionEntryComponent } from '../section-entry/section-entry.component';
 
 @Component({
   selector: 'app-section',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
   headerText:string
   bodyText:string
+
+  entries:Array<SectionEntryComponent> = new Array<SectionEntryComponent>();
 }

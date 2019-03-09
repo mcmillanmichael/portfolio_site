@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { SectionComponent } from './section.component';
+import { SectionEntryComponent } from '../section-entry/section-entry.component';
 
 describe('SectionComponent', () => {
   let component: SectionComponent;
@@ -46,6 +47,15 @@ describe('SectionComponent', () => {
     
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).toContain(bodyText);
+  })
+
+  it('should increment entry count by 1 when an entry is added', () => {
+    let entry = new SectionEntryComponent();
+    entry.headerText = "header";
+    entry.bodyText = "body";
+    component.entries.push(entry);
+
+    expect(component.entries.length).toEqual(1);
   })
   
   // select by ID example
