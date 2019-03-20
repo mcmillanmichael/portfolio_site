@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SectionEntry } from './sectionentry';
 
 @Component({
-  selector: 'app-section-entry',
+  selector: 'section-entry',
   templateUrl: './section-entry.component.html',
   styleUrls: ['./section-entry.component.scss']
 })
 export class SectionEntryComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    this.sectionentry = new SectionEntry();
+  }
 
   ngOnInit() {
   }
 
-  headerText:string
-  bodyText:string
+  @Input() sectionentry:SectionEntry
 }

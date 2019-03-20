@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SectionEntry } from './section-entry/sectionentry';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Michael McMillan';
+
+  constructor() {
+    this.sectionentries = new Array<SectionEntry>()
+  }
+
+  ngOnInit() {
+  }
+
+  title:string = 'Michael McMillan';
+  sectionentries:Array<SectionEntry>;
 }
